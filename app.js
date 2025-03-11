@@ -23,3 +23,16 @@ function agregarAmigo() {
 function limpiarCaja() {
   document.getElementById("amigo").value = "";
 }
+
+//Funcion para actualizar la lista de amigos
+
+function actualizarLista() {
+  let lista = document.getElementById("listaAmigos"); //Tenemos acceso a la ul que se modificara
+  lista.innerHTML = ""; //Se limpia para evitar duplicados
+
+  for (let i = 0; i < lista_amigos.length; i++) {
+    let li = document.createElement("li"); //Se crea una nueva 'li' para cada amigo ingresado
+    li.textContent = lista_amigos[i]; //Se asigna texto a cada 'li'
+    lista.appendChild(li); //Mostramos los cambios
+  }
+}
